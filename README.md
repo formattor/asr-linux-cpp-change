@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿# asr-linux-cpp-change
 ## 只修改了asrDemo2
 长语音识别，在百度sdk的基础上修改了一下，将pcm格式文件放入pcm中运行即可
@@ -15,3 +16,11 @@ nohup sh build_and_run.sh >output.out 2>&1 &
 ffmpeg -i 1.m4a -f s16le -ar 16000 -ac 1 -acodec pcm_s16le 1.pcm
 ### 批量转
 for i in *.m4a;do ffmpeg -y -i "$i" -acodec pcm_s16le  -f s16le  -ac 1 -ar 16000  "${i}.pcm";rename .m4a.pcm .pcm  *.m4a.pcm;done;find *.m4a|xargs rm -rf 
+=======
+# 本次修改仅限于asrDemo2
+
+# asr-linux-cpp-change
+长语音识别，在百度sdk的基础上修改了一下，将pcm格式文件放入pcm中运行即可
+../run目录下
++sh build_and_run.sh即可运行
+>>>>>>> ac22c207da55efc8de95727d911e6dec861d0c2d
