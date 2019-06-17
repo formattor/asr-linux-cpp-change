@@ -87,6 +87,12 @@ void PrintResultListener::on_nlu(const std::string &json) {
  * 表示整个识别过程结束，BDSpeechSDK实例处于空闲状态
  */
 void PrintResultListener::on_long_speech_end() {
+    std::string npath="";
+    npath=output.substr(0,output.rfind(".txt"))+".pcm";
+    std::string ppath="..//pcm";
+    npath=ppath+npath;
+    //char *p=(char*)npath.c_str();   
+    remove(npath.c_str());
     write_log("长语音结束");
 }
 
@@ -104,13 +110,21 @@ void PrintResultListener::on_error(int err_domain, int err_code, const std::stri
     oss << "识别错误， err_domain=" << err_domain << " ;err_code=" << err_code << " ;err_desc=" << err_desc << " ;sn= "
         << sn;
     write_log(oss.str());
-        
-    FILE *fp=NULL;
+    //若文件错误则直接覆盖，输入错误信息
+    //FILE *fp=NULL;
     std::string npath="./radio/";
     npath=npath+output;
-    fp=fopen(npath.c_str(),"w+");
-    fputs("识别错误",fp);
-    fclose(fp);
+    remove(npath.c_str());
+    // fp=fopen(npath.c_str(),"w+");
+    // fputs("识别错误",fp);
+    // fclose(fp);
+    //将错误文件名及编码放入当前目录的txt文件中
+    FILE *fp2=NULL;
+    fp2=fopen("./err_record.txt","a+");
+    fputs(output.c_str(),fp2);
+    fputs(" ",fp2);
+    fprintf(fp2,"%d\n",err_code);
+    fclose(fp2);
 }
 
 /**

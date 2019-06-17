@@ -11,7 +11,7 @@
 #include <string>
 #include "asrdemo/common.h"
 #include "asrdemo/StatusListener.hpp"
-
+extern std::string output;
 namespace yours {
 
 class PrintResultListener : public asrdemo::StatusListener {

@@ -90,7 +90,7 @@ int main(int argc, char **argv) {
  */
 static void recog_one_file() {
     //string filename[10] = {"../pcm/0.pcm","../pcm/1.pcm","../pcm/2.pcm","../pcm/3.pcm","../pcm/4.pcm","../pcm/5.pcm","../pcm/6.pcm","../pcm/7.pcm","../pcm/8.pcm","../pcm/9.pcm"};
-    DIR* dir = opendir("/home/zys/voice-demo/sample/asrDemo2/pcm");
+    DIR* dir = opendir("/home/voice-demo/sample/asrDemo2/pcm");
     	dirent* p = NULL;
     	while((p = readdir(dir)) != NULL)
     	{
