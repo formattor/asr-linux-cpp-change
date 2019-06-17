@@ -1,6 +1,10 @@
 # asr-linux-cpp-change
 ## 只修改了asrDemo2
 长语音识别，在百度sdk的基础上修改了一下，将pcm格式文件放入pcm中运行即可
+## 自行修改部分
+该demo自行修改的部分仅有两处
++ pcm文件
++ 文件的绝对路径，在asrDemo2/src/yours_main.cpp中，有个recog_one_file()函数，修改第一行的文件路径为自己的文件路径即可（查看方法：在当前路径下输入pwd命令）
 ### 直接运行
 sh build_and_run.sh
 ### 后台运行
