@@ -1,7 +1,9 @@
 # asr-linux-cpp-change
 ## 本次修改仅限于asrDemo2
 长语音识别，在百度sdk的基础上修改了一下，将pcm格式文件放入pcm中运行即可
+
 [百度linux c++ sdk 文档](http://ai.baidu.com/docs/#/ASR-Linux-SDK/top)
+
 [百度linux c++ sdk 下载](http://ai.baidu.com/sdk#asr)
 ## 自行修改部分
 该demo自行修改的部分仅有三处
