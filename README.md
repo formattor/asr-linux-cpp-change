@@ -6,9 +6,8 @@
 
 [百度linux c++ sdk 下载](http://ai.baidu.com/sdk#asr)
 ## 自行修改部分
-该demo自行修改的部分仅有三处
+该demo自行修改的部分仅有两处
 + pcm文件
-+ 文件的绝对路径，在asrDemo2/src/yours_main.cpp中，有个recog_one_file()函数，修改第一行的文件路径为自己的文件路径即可（查看方法：在当前路径下输入pwd命令）
 + yours_main.cpp中的AppID,APIkey,SecretKey修改为自己的
 ### 直接运行
 sh build_and_run.sh
